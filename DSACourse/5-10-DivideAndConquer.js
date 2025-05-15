@@ -13,7 +13,7 @@ function search(arr, value) {
         mid = Math.floor((high + low) / 2);
         if (value === arr[mid]) {
             return mid;
-        } else if (value > mid) {
+        } else if (value > arr[mid]) {
             low = mid + 1;
         } else {
             high = mid - 1;

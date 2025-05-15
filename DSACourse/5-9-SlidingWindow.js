@@ -39,17 +39,17 @@ function maxSubarraySum(arr, n) {
 
 // Answer (O(N) - Optimized)
 function maxSubarraySum(arr, n) {
-    if (arr.length === 0) {
+    if ((arr.length === 0) || (n === 0)) {
         return null;
     } else if (arr.length === 1) {
         return arr[0];
+    } else if (arr.length === 2) {
+        return (arr[0] + arr[1]);
     }
     
-    let max = 0, i = 0;
+    let max = 0, i = 0, temp;
     
-    if (arr.length === 2) {
-        return (arr[0] + arr[1]);
-    } else if (n >= arr.length) {
+    if (n >= arr.length) {
         let c = 0;
         for(let i = 0; i < arr.length; i++) {
             c += arr[i];
@@ -63,11 +63,11 @@ function maxSubarraySum(arr, n) {
     }
     
     i = 1;
+    temp = max;
     
     while(i < (arr.length + 1 - n)) {
-        if ((max + arr[i + n - 1] - arr[i - 1]) > max) {
-            max +=  arr[i + n - 1] - arr[i - 1];
-        }
+        temp += arr[i + n - 1] - arr[i - 1];
+        max = Math.max(temp, max);
         i++;
     }
     
