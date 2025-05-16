@@ -29,6 +29,8 @@
 // Explanation 2:
 // sort the array.
 
+// -------------------------------------------------------------------------
+
 // Answer - 1 (O(N))
 function solve(A) {
     let count = 0, i = 0, j = 0;

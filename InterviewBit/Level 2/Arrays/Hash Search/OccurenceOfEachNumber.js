@@ -33,6 +33,8 @@
 // Explanation 2:
 // Explained in the description above.
 
+// -------------------------------------------------------------------------
+
 // Answer (O(log N))
 function findOccurrences(A) {
     if (A.length === 0) {

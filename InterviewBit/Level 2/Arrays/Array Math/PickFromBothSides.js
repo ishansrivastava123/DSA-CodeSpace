@@ -1,4 +1,5 @@
 // Question
+
 // Given an integer array A of size N.
 // You have to pick exactly B elements from either left or right end of the array A to get the maximum sum.
 // Find and return this maximum possible sum.
@@ -38,6 +39,8 @@
 //  Pick element 5 from front and element (1, 2) from back so we get 5 + 1 + 2 = 8
 // Explanation 2:
 //  Pick element 2 from end as this is the maximum we can get
+
+// -------------------------------------------------------------------------
 
 // Answer (O(log N))
 function solve(A, B) {

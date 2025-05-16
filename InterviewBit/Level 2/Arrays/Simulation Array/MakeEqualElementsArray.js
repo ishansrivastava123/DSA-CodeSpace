@@ -37,6 +37,8 @@
 // Explanation 2:
 // There is no way to make all elements equal to 0.
 
+// -------------------------------------------------------------------------
+
 // Answer (O(log N) - My solution (BigInt not included))
 function solve(A, B) {
 	if ((A.length === 0) || (B === 0)) {
