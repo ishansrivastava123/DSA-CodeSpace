@@ -15,6 +15,6 @@
 // ------------------------------------------------
 
 // Answer
-rotateArray : function(A, B){
+rotateArray : function(A, B) {
     return [...A.slice(B % A.length), ...A.slice(0, (B % A.length))];
 }

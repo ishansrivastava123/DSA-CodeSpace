@@ -29,7 +29,7 @@
 
 // ------------------------------------------------
 
-// Answer
+// Answer (O(N log N))
 function mergeOverlapping(A){
     let i = 0, output = [];
     A.sort((a, b) => a[0] - b[0]);

@@ -39,7 +39,7 @@
 
 // -------------------------------------------------------------------------
 
-// Answer (O(log N) - My solution (BigInt not included))
+// Answer (O(N) - My solution (BigInt not included))
 function solve(A, B) {
 	if ((A.length === 0) || (B === 0)) {
 		return 0;
@@ -65,7 +65,7 @@ function solve(A, B) {
 	}
 }
 
-// Answer (O(log N) - ChatGPT (BigInt included))
+// Answer (O(N) - ChatGPT (BigInt included))
 function solve(A, B) {
     A = A.map(a => BigInt(a));
     B = BigInt(B);

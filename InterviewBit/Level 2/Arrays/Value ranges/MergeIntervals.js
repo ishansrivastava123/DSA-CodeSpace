@@ -41,7 +41,7 @@
 
 // ------------------------------------------------
 
-// Answer
+// Answer (O(N))
 function solve(intervals, new_interval) {
     let i = 0, output = [];
     const lower = Math.min(new_interval[0], new_interval[1]);
@@ -67,4 +67,4 @@ function solve(intervals, new_interval) {
     }
     
     return output;
-},
+}

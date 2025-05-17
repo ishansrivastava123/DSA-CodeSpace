@@ -35,7 +35,7 @@
 
 // -------------------------------------------------------------------------
 
-// Answer (O(log N))
+// Answer (O(N + K log K))
 function findOccurrences(A) {
     if (A.length === 0) {
         return [];
