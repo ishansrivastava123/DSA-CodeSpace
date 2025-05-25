@@ -75,3 +75,41 @@ function lengthOfLongestSubstring(s) {
     }
     return max;
 };
+
+// Solution (O(N) - Without using Map)
+function lengthOfLongestSubstring(s) {
+    let seen = {};
+    let maxLen = 0;
+    let start = 0;
+
+    for (let end = 0; end < s.length; end++) {
+        const char = s[end];
+
+        if (seen[char] !== undefined && seen[char] >= start) {
+            start = seen[char] + 1;
+        }
+
+        seen[char] = end;
+        maxLen = Math.max(maxLen, end - start + 1);
+    }
+
+    return maxLen;
+}
+
+// Solution (O(N) - Using Map)
+function lengthOfLongestSubstring(s) {
+    let map = new Map();
+    let start = 0;
+    let max = 0;
+    
+    for (let i = 0; i < s.length; i++) {
+        if (map.has(s[i]) && map.get(s[i]) >= start) {
+            start = map.get(s[i]) + 1;
+        }
+        
+        map.set(s[i], i);
+        max = Math.max(max, i - start + 1);
+    }
+    
+    return max;
+}
